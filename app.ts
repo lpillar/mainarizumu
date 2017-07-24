@@ -18,14 +18,14 @@ function drawGrid()
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
-    ctx.moveTo(2.5, 2.5);
-    ctx.lineTo(canvas.width - 2.5, 2.5);
+    ctx.moveTo(ctx.lineWidth / 2, ctx.lineWidth / 2);
+    ctx.lineTo(canvas.width - ctx.lineWidth / 2, ctx.lineWidth / 2);
     ctx.stroke();
-    ctx.lineTo(canvas.width - 2.5, canvas.height - 2.5);
+    ctx.lineTo(canvas.width - ctx.lineWidth / 2, canvas.height - ctx.lineWidth / 2);
     ctx.stroke();
-    ctx.lineTo(2.5, canvas.height - 2.5);
+    ctx.lineTo(ctx.lineWidth / 2, canvas.height - ctx.lineWidth / 2);
     ctx.stroke();
-    ctx.lineTo(2.5, 2.5);
+    ctx.lineTo(ctx.lineWidth / 2, ctx.lineWidth / 2);
     ctx.stroke();
 
     for (var x = 0; x <= canvas.width; x = x + cellSize)
